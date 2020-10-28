@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+//import React and ReactDOM
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function getButtonText(){
+  return 'Click me! Yay'
 }
+
+//Create a React component
+const App =() =>{
+
+  //reference text
+  //const textButton ='Click me!'
+  return (<div>
+    <label className="label">
+     Enter name:
+     </label>
+     <input id="name" type="text"/>
+     <button style={{backgroundColor:'green',color:'white'}}>
+     {getButtonText()}
+     </button>
+ </div>);
+
+}
+//Take the React component and show it to the screen
+ReactDOM.render(<App/>, document.querySelector("#root"))
 
 export default App;
