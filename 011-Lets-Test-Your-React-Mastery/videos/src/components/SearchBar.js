@@ -11,6 +11,7 @@ class SearchBar extends React.Component {
         event.preventDefault();
 
         //TODO:Make sure we callback from parent
+        this.props.onFormSubmit(this.state.term)
     }
 
     render() {
@@ -19,7 +20,7 @@ class SearchBar extends React.Component {
               <form onSubmit={this.onFormSubmit} className="ui form">
                 <div className="field">
                 <label>Video Search</label>    
-                <input class="form-control" 
+                <input className="form-control" 
                 type="text" 
                 placeholder="Search" 
                 aria-label="Search"
