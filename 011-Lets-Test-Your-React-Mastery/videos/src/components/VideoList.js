@@ -6,7 +6,7 @@ const VideoList=({ videos }) =>{
    const renderedList = videos.map( video => {
         return <VideoItem video={video}/>;
     });
-    return <div>{renderedList}</div>
+    return <div className="list-group">{renderedList}</div>
 };
 
 export default VideoList;
