@@ -2,13 +2,13 @@ import React from 'react';
 import './VideoItem.css';
 
 //Destructuring to get video
-const VideoItem=({video})=>{
+const VideoItem=({video, onVideoSelected})=>{
 
     return (
-    <div className ="item">
-       <img className="rounded mx-auto d-block" src={video.snippet.thumbnails.medium.url} alt=""/>
-       <div className="card-title">
-       <div className ="card-text">{video.snippet.title}</div>
+    <div onClick={() => onVideoSelected(video)}className ="video-item item">
+       <img className="ui image" src={video.snippet.thumbnails.medium.url} alt=""/>
+       <div className="content">
+       <div className ="header">{video.snippet.title}</div>
        </div>
     </div>
     );
